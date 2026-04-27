@@ -1,5 +1,11 @@
 fn two_sort(arr: &[&str]) -> String {
-    // your code here
+    let mut words = arr.to_vec();
+    words.sort();
+    words[0]
+        .chars()
+        .map(|c| c.to_string())
+        .collect::<Vec<_>>()
+        .join("***")
 }
 
 

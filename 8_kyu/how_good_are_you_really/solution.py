@@ -1,4 +1,7 @@
 def better_than_average(class_points, your_points):
-    average_class_point = [100, 40, 34, 57, 29, 72, 57, 88]
-    for i in average_class_point:
-        print(i)
+    average_class_point = sum(class_points) / len(class_points)
+    if average_class_point >= your_points:
+        return False
+    return True
+
+print(better_than_average([50, 50, 50], 50))
